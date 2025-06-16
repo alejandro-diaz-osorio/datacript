@@ -7,11 +7,19 @@
     Datacript
   </h1>
   <div class="w-full max-w-xl mb-4">
+    <label for="result" class="block text-white text-xl mb-2">Result:</label>
+    <input
+      type="text"
+      name="result"
+      id="result"
+      readonly
+      class="gradiente rounded-lg p-4 text-white w-full focus:outline-none"
+    />
     <label for="encrypt-text" class="block text-white text-xl mb-2"
       >Insert text:</label
     >
     <textarea
-      name="encrypted"
+      name="encrypt-text"
       id="encrypt-text"
       rows="8"
       required
@@ -31,9 +39,10 @@
     />
   </div>
   <button
+    id="encrypt"
     class="w-full max-w-xl py-3 text-2xl text-white font-semibold uppercase bg-amber-800 rounded-lg shadow-lg
     hover:cursor-pointer hover:bg-amber-700
-    active:bg-white active:text-amber-700 
+    active:bg-white active:text-amber-700
     transition-all"
     >Encrypt</button
   >
@@ -49,3 +58,16 @@
     );
   }
 </style>
+
+<script>
+  const $submit = document.getElementById("encrypt") as HTMLButtonElement;
+  const $result = document.getElementById("result") as HTMLInputElement;
+  const $text = document.getElementById("encrypt-text") as HTMLInputElement;
+  const $hash = document.getElementById("hash") as HTMLInputElement;
+
+  $submit.addEventListener("click", () => {
+    const hash = $hash.value;
+    const text = $text.value;
+    $result.value = text + hash;
+  });
+</script>
