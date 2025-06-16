@@ -1,0 +1,51 @@
+<section
+  class="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-cyan-900 via-gray-700 to-amber-900"
+>
+  <h1
+    class="text-6xl font-bold text-white uppercase text-shadow-lg text-shadow-black mb-8 bg-amber-800 px-8 py-4 rounded-lg shadow-lg"
+  >
+    Datacript
+  </h1>
+  <div class="w-full max-w-xl mb-4">
+    <label for="encrypt-text" class="block text-white text-xl mb-2"
+      >Insert text:</label
+    >
+    <textarea
+      name="encrypted"
+      id="encrypt-text"
+      rows="8"
+      required
+      autocomplete="off"
+      class="w-full gradiente rounded-lg p-4 text-white resize-none focus:outline-none"
+    ></textarea>
+  </div>
+  <div class="w-full max-w-xl mb-4">
+    <label for="hash" class="block text-white text-xl mb-2">Password:</label>
+    <input
+      type="password"
+      name="hash"
+      id="hash"
+      class="w-full gradiente rounded-lg p-4 text-white focus:outline-none"
+      required
+      autocomplete="off"
+    />
+  </div>
+  <button
+    class="w-full max-w-xl py-3 text-2xl text-white font-semibold uppercase bg-amber-800 rounded-lg shadow-lg
+    hover:cursor-pointer hover:bg-amber-700
+    active:bg-white active:text-amber-700 
+    transition-all"
+    >Encrypt</button
+  >
+</section>
+
+<style>
+  .gradiente {
+    background: linear-gradient(
+      180deg,
+      #164e59ff 0%,
+      #0e749080 50%,
+      #00000000 100%
+    );
+  }
+</style>
