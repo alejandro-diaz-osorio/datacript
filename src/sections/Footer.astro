@@ -1,0 +1,66 @@
+---
+const currentYear = new Date().getFullYear();
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="bg-transparent text-white pt-20">
+  <div
+    class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-8 gap-6"
+  >
+    <div class="flex items-center space-x-3">
+      <Icon
+        name="mdi:star-four-points"
+        class="w-8 h-8 text-[#43cea2] animate-spin-slow"
+      />
+      <span
+        class="font-extrabold text-xl bg-gradient-to-r from-[#43cea2] to-[#185a9d] bg-clip-text text-transparent"
+      >
+        Alejandro Díaz Osorio
+      </span>
+      <span class="text-sm text-gray-400">
+        &copy; {currentYear}
+      </span>
+    </div>
+    <div class="flex space-x-6 px-6">
+      <a
+        href="https://github.com/alejandro-diaz-osorio"
+        class="hover:text-[#43cea2] transition-colors"
+        aria-label="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="mdi:github" class="w-7 h-7" />
+      </a>
+      <a
+        href="mailto:osoriodiazalejandro@gmail.com"
+        class="hover:text-[#43cea2] transition-colors"
+        aria-label="Email"
+      >
+        <Icon name="mdi:email" class="w-7 h-7" />
+      </a>
+      <a
+        href="https://linkedin.com/in/alejandro-diaz-osorio"
+        class="hover:text-[#43cea2] transition-colors"
+        aria-label="LinkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="mdi:linkedin" class="w-7 h-7" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .animate-spin-slow {
+    animation: spin 5s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
