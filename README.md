@@ -4,7 +4,7 @@ Aplicación web para encriptar y desencriptar mensajes usando AES-128 con una cl
 
 ## Vista previa
 
-![Preview](public\page_preview.png)
+![Preview](https://github.com/user-attachments/assets/addab195-b1c3-4e6d-aa3e-27501f334412)
 
 ## Características
 
