@@ -1,48 +1,53 @@
-# Astro Starter Kit: Basics
+# 🔐 DATA.CRIPT
 
-```sh
-pnpm create astro@latest -- --template basics
+Aplicación web para encriptar y desencriptar mensajes usando AES-128 con una clave personalizada.
+
+## Vista previa
+
+![Preview](public\page_preview.png)
+
+## Características
+
+- 🔐 Cifrado AES-128 en modo CBC con padding PKCS7
+- ✅ IV aleatorio
+- 🔁 Función de desencriptado compatible
+- ⚡ Interfaz simple y rápida
+
+## Requisitos
+
+- Node.js >= 18
+- pnpm (opcional, recomendado)
+
+## Instalación
+
+```bash
+git clone https://github.com/tu-usuario/datacript.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+cd datacript
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+```bash
+pnpm install
+```
 
-## 🧞 Commands
+## Desarrollo local
 
-All commands are run from the root of the project, from a terminal:
+```bash
+pnpm dev
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+```bash
+Visita http://localhost:4321
+```
 
-## 👀 Want to learn more?
+## Seguridad
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- El IV se genera aleatoriamente y se adjunta en el mensaje cifrado.
+- La clave del usuario se ajusta a 128 bits (16 caracteres) automáticamente.
+- El descifrado valida y muestra errores si la clave es incorrecta o el formato inválido.
+
+---
+
+#### Este proyecto es para fines educativos.
